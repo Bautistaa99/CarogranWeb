@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets"
+import Logo from './img/LogoCarogran.jpg'
+---
+
+<header class="headerContainer">
+  <div>
+    <Image 
+      src={Logo} 
+      alt="Logo Carogran S.A" 
+      width="150"
+    />
+  </div>
+  <nav class="navContainer">
+    <ul class="navList">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
+    </ul>
+  </nav>
+</header>
