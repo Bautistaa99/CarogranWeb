@@ -1,0 +1,28 @@
+---
+
+interface Props {
+  src: string;
+  alt: string;
+  title: string;
+  href: string;
+  calidad: string;
+}
+
+const { src, alt, href, title, calidad } = Astro.props;
+---
+
+<div class="productCard">
+  <a href={href}>
+    <div>
+      <img src={src} alt={alt} />
+    </div>
+    <div>
+      <h3 class="productCardTitle">
+        {title}
+        </br>
+        {calidad}
+      </h3>
+    </div>
+    <button> Ver ficha del producto </button>
+  </a>
+</div>

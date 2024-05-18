@@ -1,0 +1,460 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-size: 40px;
+  background: linear-gradient(
+    180deg,
+    #fdfdfd 0%,
+    #ffe8e8 22.5%,
+    #ffe8e8 50.5%,
+    #ffe8e8 77%,
+    rgba(253, 253, 253, 0) 100%
+  );
+  font-family: "Nunito", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 900;
+}
+h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+h4{
+  font-size: 1.3rem;
+}
+a,p{
+  font-size: 1rem;
+}
+small{
+  font-size: 0.8rem;
+}
+
+/*** Header */
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  background: #fae8e8;
+  padding: 1rem 7rem;
+}
+
+.headerContainer>div{
+  display: flex;
+}
+
+.navList {
+  display: flex;
+  gap: 30px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+/*** Main */
+
+.mainContainer {
+  position: relative; /* Añade posición relativa para que el fondo pueda posicionarse correctamente */
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh; /* Establece una altura mínima igual a la altura de la ventana */
+}
+
+h1,
+h2 {
+  position: relative; /* Ajusta la posición de los títulos */
+  z-index: 1; /* Coloca los títulos por encima del fondo */
+  margin: 0;
+}
+
+span {
+  color: red;
+}
+
+.fondo {
+  position: absolute; /* Establece la posición absoluta para el fondo */
+  height: 100%; /* Ajusta la altura para cubrir todo el contenedor */
+  z-index: 0; /* Coloca el fondo detrás del contenido */
+  background-size: auto;
+  border-radius: 0 0 20px 20px;
+  opacity: 0.8;
+}
+
+/*** Cards */
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Crea 3 columnas con el mismo ancho */
+  gap: 80px 80px; /* Espacio entre las celdas */
+  margin: 50px 0;
+}
+
+.cardContainer {
+  display: grid;
+  padding: 0;
+  
+}
+
+.productsTitle {
+  text-align: center;
+}
+
+.productCard {
+  display: flex;
+  padding: 12px 28px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 500px;
+}
+
+.productCard > a > div > img {
+  width: 10rem;
+  border-radius: 1rem;
+  object-fit: contain;
+}
+
+.productCard > a > div > h3 {
+  text-align: center;
+}
+
+.productCard > a > div > p {
+  width: 241px;
+  height: 95px;
+  text-align: center;
+}
+
+.productCard > a > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  gap: 8px;
+  border-radius: 12px;
+  background: #fd0003;
+  border: none;
+  font-weight: bolder;
+}
+
+.productCard > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/** Contacto */
+.Contact{
+  margin-top: 100px;
+}
+
+.Contact > h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.ContactContainer {
+  display: flex;
+  width: 100%;
+}
+
+.ContactInfo, .AddressesContainer{
+  width: 50vw;
+  display: flex;
+}
+
+.ContactInfo>div>div ,.AddressesContainer>div>div{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.ContactInfo>div>div>p, .AddressesContainer>div>div>a>p{
+  margin: 0;
+}
+
+.AddressTitleContainer, .ContactTitleContainer{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ContactInfo, .AddressesContainer{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
+
+
+
+.Map{
+  border-radius: 20px;
+  border:0;
+  height: auto;
+  width: auto;
+}
+
+/* About Us */
+
+.AboutUsContainer>h2{
+  text-align: center;
+}
+.AboutUsContainer>div{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 40px;
+  gap: 20px;
+}
+.AboutUsContainer>div>div{
+  width: 50vw;
+}
+.AboutUsTextContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.AboutUsTextContainer>h4{
+  text-align: center;
+  margin-top: 0;
+}
+.AboutUsImageContainer{
+  display: flex;
+  justify-content: end;
+}
+.AboutUsImageContainer>img{
+  width: 100%;
+  height: min-content;
+}
+.AddressesContainer>div>div>p{
+  margin-top: 0;
+}
+
+.AboutUsContainer{
+  margin-top: 100px;
+}
+.AboutUsContainer>div{
+  margin-top: 50px;
+}
+
+
+
+
+/* Product Card Page */
+.productCardPage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  
+}
+
+.productCardPage:first-child{
+  display: flex;
+  flex-direction: column;
+}
+
+.productCardPage>div>:nth-child(2){
+  display: flex;
+  align-items: center;
+  text-align: center;
+  max-width: 500px;
+
+}
+.productCardPage:nth-child(2)  > p {
+  max-width: 500px;
+  margin: 0 auto; /* Centra el párrafo dentro del div */
+  overflow-wrap: break-word; /* Permite que las palabras largas se rompan */
+  background-color: red;
+}
+
+
+/* Footer  */
+
+
+footer{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(209, 209, 209);  
+  padding: 2rem 2rem 2rem 4rem;
+  margin-top: 4rem;
+}
+
+
+
+
+
+
+
+@media (max-width: 1280px) {
+  body {
+    font-size: 40px;
+  }
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Crea 3 columnas con el mismo ancho */
+    gap: 80px 80px; /* Espacio entre las celdas */
+    margin: 50px 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 40px;
+  }
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Crea 3 columnas con el mismo ancho */
+    gap: 80px 80px; /* Espacio entre las celdas */
+    margin: 50px 0;
+  }
+  .AboutUsTextContainer>p{
+    justify-content: center;
+  }
+
+  .AboutUsImageContainer{
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+/* Tabletas */
+@media (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+  .navContainer{
+    display: flex;
+    align-items: center;
+  }
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Crea 3 columnas con el mismo ancho */
+    gap: 80px 80px; /* Espacio entre las celdas */
+    margin: 50px 50px 0;
+  }
+
+  .AboutUsContainer>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .AboutUsTextContainer>h4{
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
+
+/* Celulares */
+@media (max-width: 450px) {
+  body {
+    font-size: 10px;
+  }
+  h1{
+    text-align: center;
+    font-size: 40px;
+  }
+  h2{
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .navContainer{
+    display: none;
+  }
+  .headerContainer{
+    justify-content: center;
+  }
+
+  #products{
+    margin-top: 70px;
+  }
+
+  #contact{
+    margin-top: 70px;
+  }
+
+  #aboutUs{
+    margin-top: 70px;
+  }
+
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Crea 3 columnas con el mismo ancho */
+    gap: 80px 80px; /* Espacio entre las celdas */
+    margin: 50px 0;
+  }
+
+  /* CONTACT */
+  .ContactContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .AddressesContainer, .co{
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .AddressesContainer>div{
+    width: 100%;
+  }
+  .Map{
+    max-width: 100%;
+  }
+
+  /* About us  */
+
+  .AboutUsContainer>div>div{
+    width: 100%;
+  }
+
+  .AboutUsTextContainer{
+    width: 100%;
+  }
+
+
+
+
+}
+

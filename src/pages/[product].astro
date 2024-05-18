@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { products } from "../data/data";
+import { Image } from "astro:assets";
+
+const { product } = Astro.params;
+
+const info = products.find((p) => p.id === product);
+
+if (!info) {
+  return Astro.redirect("/404");
+}
+
+export const getStaticPaths = async () => {
+  const paths = products.map((product) => ({
+    params: { product: product.id.toString() },
+  }));
+
+  return paths;
+};
+
+const rice = `/src/components/img/products/${info.src}`;
+---
+
+<Layout title={`Carogran - ${info.nombre}`}>
+  <div class="productCardPage">
+    <div >
+      <div>
+        <img src={rice} alt={info.alt} />
+      </div>
+    </div>
+    <div>
+      <h1>{info.nombre}</h1>
+      <p>
+        {info.descripcion}
+      </p>
+    </div>
+  </div>
+</Layout>

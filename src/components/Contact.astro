@@ -1,0 +1,83 @@
+---
+import { Image } from "astro:assets";
+import Phone from "./img/Icons/Phone.png";
+import WhatsApp from "./img/Icons/WhatsApp.png";
+import Gmail from "./img/Icons/Gmail.png";
+import Ubication from "./img/Icons/PlaceMarker.png";
+---
+
+<section class="Contact" id="contact">
+  <h2>Contacto</h2>
+  <div class="ContactContainer">
+    <div class="ContactInfo">
+      <div>
+        <div>
+          <div class="ContactTitleContainer">
+            <Image src={Phone} alt="Telefono Carogran" />
+            <h3>Telefono</h3>
+          </div>
+          <p><a href="tel:+1148110900">(011) 4811-0900</a></p>
+        </div>
+        <div>
+          <div class="ContactTitleContainer">
+            <Image src={WhatsApp} alt="WhatsApp Carogran" />
+            <h3>WhatsApp</h3>
+          </div>
+          <p>
+            <a
+              href="https://wa.me/1141746937?text=Hola%20¿Cómo%20estás?"
+              target="_blank"
+            >
+              11 4174-6937
+            </a>
+          </p>
+        </div>
+        <div>
+          <div class="ContactTitleContainer">
+            <Image src={Gmail} alt="Mail Carogran" />
+            <h3>Correo</h3>
+          </div>
+          <p>
+            <a href="mailto:ventas@carogran.com.ar" target="_blank">
+              ventas@carogran.com.ar
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="AddressesContainer">
+      <div>
+        <div>
+          <div class="AddressTitleContainer">
+            <Image src={Ubication} alt="Ubicacion Oficinas Carogran" />
+            <h3>Oficina</h3>
+          </div>
+  
+          <a
+            href="https://www.google.com/maps?q=Av.%20Córdoba%201345%20Piso%206,%20Capital%20federal,%20Buenos%20Aires"
+            target="_blank"
+          >
+            <p>Av. Córdoba 1345 Piso 6,</br> Capital federal, Buenos Aires</p>
+          </a>
+        </div>
+        <div>
+          <div class="AddressTitleContainer">
+            <Image src={Ubication} alt="Ubicacion Oficinas Carogran" />
+            <h3>Planta</h3>
+          </div>
+          <a href="https://maps.app.goo.gl/sRGekPbocBQwmjWr7" target="_blank">
+            <p>La Clarita, Entre Rios</p>
+          </a>
+        </div>
+        <div>
+          <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13537.464440156087!2d-58.3896799!3d-31.9780894!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b1e01552afc789%3A0xe10a9334771482be!2sCarogran%20S.a.!5e0!3m2!1ses-419!2sar!4v1714533950626!5m2!1ses-419!2sar"
+          allowfullscreen=""
+          loading="lazy"
+          class="Map"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+---
+import Card from "./Card.astro";
+import { products } from "../../data/data";
+---
+
+<section id="products">
+  <h2 class="productsTitle">Nuestros Productos</h2>
+  <ul class="cardContainer">
+    {
+      products.map(({ id, nombre, src, alt, calidad }) => {
+        return (
+          <li>
+            <Card
+              href={`/${id}`}
+              title={nombre}
+              calidad={calidad}
+              src={`/src/components/img/products/${src}`}
+              alt={alt}
+            />
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>
