@@ -46,6 +46,9 @@ small{
 }
 
 /*** Header */
+.hamburgerMenuContainer{
+  display: none;
+}
 .headerContainer {
   display: flex;
   justify-content: space-between;
@@ -65,7 +68,14 @@ small{
   padding: 0;
 }
 
+.backContainer>Image{
+  height: 20px;
+  width: 20px
+}
+
 /*** Main */
+
+
 
 .mainContainer {
   position: relative; /* Añade posición relativa para que el fondo pueda posicionarse correctamente */
@@ -270,7 +280,6 @@ span {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  
 }
 
 .productCardPage:first-child{
@@ -349,14 +358,81 @@ footer{
 
 }
 
-/* Tabletas */
-@media (max-width: 768px) {
+/* Tabletas 768 */
+@media (max-width: 850px) {
+  h1{
+    font-size: 60px;
+  }
+  h2{
+    font-size: 35px;
+  }
   body {
     font-size: 18px;
   }
   .navContainer{
     display: flex;
     align-items: center;
+  }
+  .navList{
+    display: none;
+  }
+  .headerContainer{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    position: 0;
+  }
+  header{
+    height: 94px;
+  }
+
+  .active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #fae8e8;
+    padding: 1rem;
+    width: auto;
+    border-radius: 10px;
+    z-index: 10;
+  }
+  .hamburgerMenuContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+  }
+  .hamburgerMenu{
+    height: 40px;
+    width: auto;
+  }
+
+
+
+  .hamburgerMenuContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hamburgerMenu{
+    height: 40px;
+    width: auto;
+  }
+  .headerContainer{
+    display: flex;
+    justify-content: space-around;
+    padding: 16px 0;
+  }
+
+  .mainContainer{
+    min-height: 0;
   }
   .cardContainer {
     display: grid;
@@ -379,10 +455,20 @@ footer{
     text-align: center;
     margin-bottom: 0;
   }
+
+  .AboutUsContainer>div>div{
+    width: 75vw;
+  }
+
+  #main{
+    margin-top: 40px;
+  }
+  #products{
+    margin-top: 70px;
+  }
 }
 
-/* Celulares */
-@media (max-width: 450px) {
+@media (max-width: 650px) {
   body {
     font-size: 10px;
   }
@@ -394,12 +480,54 @@ footer{
     text-align: center;
     font-size: 32px;
   }
+  .headerContainer{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    position: 0;
+  }
+  header{
+    height: 94px;
+  }
 
-  .navContainer{
+  .navList{
     display: none;
   }
-  .headerContainer{
+  .active{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #fae8e8;
+    padding: 1rem;
+    width: auto;
+    border-radius: 10px;
+    z-index: 10;
+  }
+  .hamburgerMenuContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+  }
+  .hamburgerMenu{
+    height: 40px;
+    width: auto;
+  }
+
+  .mainContainer{
+    min-height: auto;
+  }
+
+
+  #main{
+    margin-top: 35px;
   }
 
   #products{
@@ -422,6 +550,10 @@ footer{
     ); /* Crea 3 columnas con el mismo ancho */
     gap: 80px 80px; /* Espacio entre las celdas */
     margin: 50px 0;
+  }
+
+  .productCardImgContainer>img{
+    width: 150px;
   }
 
   /* CONTACT */
@@ -454,7 +586,165 @@ footer{
   }
 
 
+    /* Product Card Page */
+  .productCardPage{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  .productCardPage>div>div>img{
+    width: 50%;
+  }
+  .productCardPage>div>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .productCardPageTextContainer{
+    margin: 0 30px;
+  }
 
+}
+
+
+
+/* Celulares */
+@media (max-width: 450px) {
+  body {
+    font-size: 10px;
+  }
+  h1{
+    text-align: center;
+    font-size: 40px;
+  }
+  h2{
+    text-align: center;
+    font-size: 32px;
+  }
+  .headerContainer{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    position: 0;
+  }
+  header{
+    height: 94px;
+  }
+
+  .navList{
+    display: none;
+  }
+  .active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #fae8e8;
+    padding: 1rem;
+    width: auto;
+    border-radius: 10px;
+    z-index: 10;
+  }
+  .hamburgerMenuContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+  }
+  .hamburgerMenu{
+    height: 40px;
+    width: auto;
+  }
+
+  .mainContainer{
+    min-height: auto;
+  }
+  
+  #main{
+    margin-top: 35px;
+  }
+
+  #products{
+    margin-top: 70px;
+  }
+
+  #contact{
+    margin-top: 70px;
+  }
+
+  #aboutUs{
+    margin-top: 70px;
+  }
+
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Crea 3 columnas con el mismo ancho */
+    gap: 80px 80px; /* Espacio entre las celdas */
+    margin: 50px 0;
+  }
+
+  .productCardImgContainer>img{
+    width: 150px;
+  }
+
+  /* CONTACT */
+  .ContactContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .AddressesContainer, .co{
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .AddressesContainer>div{
+    width: 100%;
+  }
+  .Map{
+    max-width: 100%;
+  }
+
+  /* About us  */
+
+  .AboutUsContainer>div>div{
+    width: 100%;
+  }
+
+  .AboutUsTextContainer{
+    width: 100%;
+  }
+
+
+    /* Product Card Page */
+  .productCardPage{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  .productCardPage>div>div>img{
+    width: 50%;
+  }
+  .productCardPage>div>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .productCardPageTextContainer{
+    margin: 0 30px;
+  }
 
 }
 

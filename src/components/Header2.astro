@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Logo from './img/Icons/carogranLogo.png';
-import Menu from './img/Icons/menuHamburgesa.png';
+import Back from './img/Icons/back.png';
 ---
 
 <header>
@@ -12,17 +12,9 @@ import Menu from './img/Icons/menuHamburgesa.png';
       </a>
     </div>
     <nav class="navContainer">
-      <button class="hamburgerMenuContainer" id="hamburgerIcon">
-        <Image src={Menu} alt="menu hamburgesa" class="hamburgerMenu"/>
-      </button>
-      <div class="navListContainer">
-        <ul class="navList" id="navList">
-          <li><a href="#index">Inicio</a></li>
-          <li><a href="#products">Productos</a></li>
-          <li><a href="#contact">Contacto</a></li>
-          <li><a href="#aboutUs">Sobre nosotros</a></li>
-        </ul>
-      </div>
+      <a href="/" class="backContainer">
+        <Image src={Back} alt="Volver" width="30" />
+      </a>
     </nav>
   </div>
 </header>
