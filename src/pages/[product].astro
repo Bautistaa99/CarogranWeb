@@ -1,7 +1,6 @@
 ---
 import Layout2 from "../layouts/Layout2.astro";
 import { products } from "../data/data";
-import { Image } from "astro:assets";
 
 const { product } = Astro.params;
 
@@ -19,16 +18,15 @@ export const getStaticPaths = async () => {
   return paths;
 };
 
-const rice = `/src/components/img/products/${info.src}`;
+
+
 ---
 
 <Layout2 title={`Carogran - ${info.nombre}`}>
-  <div class="productCardPage" transition:animate="slide">
-    <div >
+  <div class="productCardPage">
       <div>
-        <img src={rice} alt={info.alt} />
+        <img src=`/public/Products/${info.src}` alt={info.alt} />
       </div>
-    </div>
     <div class="productCardPageTextContainer">
       <h1>{info.nombre}</h1>
       <p>
@@ -37,3 +35,4 @@ const rice = `/src/components/img/products/${info.src}`;
     </div>
   </div>
 </Layout>
+

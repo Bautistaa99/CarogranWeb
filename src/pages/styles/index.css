@@ -164,6 +164,7 @@ span {
   background: #fd0003;
   border: none;
   font-weight: bolder;
+  cursor: pointer;
 }
 
 .productCard > a {
@@ -299,6 +300,18 @@ span {
   margin: 0 auto; /* Centra el párrafo dentro del div */
   overflow-wrap: break-word; /* Permite que las palabras largas se rompan */
   background-color: red;
+}
+
+.productCardPage>div>img{
+  width: 250px;
+}
+
+.productCardPageTextContainer>h1{
+  font-size: 3rem;
+  text-align: center;
+}
+.productCardPageTextContainer>p{
+  text-align: center;
 }
 
 
@@ -444,6 +457,9 @@ footer{
     margin: 50px 50px 0;
   }
 
+  .productCard>a{
+    cursor: pointer;
+  }
   .AboutUsContainer>div{
     display: flex;
     flex-direction: column;
