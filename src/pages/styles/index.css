@@ -303,7 +303,7 @@ span {
 }
 
 .productCardPage>div>img{
-  width: 250px;
+  max-width: 200px;
 }
 
 .productCardPageTextContainer>h1{
