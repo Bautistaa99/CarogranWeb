@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { products } from "../data/data";
+import { Image } from "astro:assets";
 
 const { product } = Astro.params;
 
@@ -22,7 +23,8 @@ export const getStaticPaths = async () => {
 
 ---
 
-<Layout title={`Carogran`}>
+<Layout title={`Productos`}>
+
   <div class="productCardPage">
       <div>
         <img src=`/Products/${info.src}` alt={info.alt} />

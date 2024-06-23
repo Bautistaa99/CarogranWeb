@@ -37,6 +37,7 @@ h3 {
 }
 h4{
   font-size: 1.3rem;
+  font-weight: 600;
 }
 a,p{
   font-size: 1rem;
@@ -68,10 +69,7 @@ small{
   padding: 0;
 }
 
-.backContainer>Image{
-  height: 20px;
-  width: 20px
-}
+
 
 /*** Main */
 
@@ -211,6 +209,15 @@ span {
   align-items: center;
   gap: 10px;
 }
+.MobilesContainer>div>h4, .MobilesContainer>div>p{
+  margin: 5px;
+}
+
+.MobilesContainer>div:nth-child(2){
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+
 
 .ContactInfo, .AddressesContainer{
   align-items: center;
@@ -272,15 +279,13 @@ span {
   margin-top: 50px;
 }
 
-
-
-
 /* Product Card Page */
 .productCardPage{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 40px;
+  margin-top: 50px;
 }
 
 .productCardPage:first-child{
@@ -313,6 +318,7 @@ span {
 .productCardPageTextContainer>p{
   text-align: center;
 }
+
 
 
 /* Footer  */

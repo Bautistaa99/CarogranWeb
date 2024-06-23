@@ -4,7 +4,7 @@ export const products = [
     nombre: "Arroz Largo Fino",
     calidad: "00000",
     descripcion:
-      "Sumérgete en la excelencia culinaria con nuestro arroz Largo Fino 00000. Reconocido por su grano extra largo, calidad premium y elección excepcional, este arroz excepcionalmente refinado ofrece una experiencia culinaria incomparable. Cada grano, cuidadosamente seleccionado, garantiza una textura delicada y un sabor incomparable. Con hasta un 15% de granos partidos, este arroz conserva su integridad y calidad, asegurando resultados perfectos en cada plato. Descubre el verdadero placer de cocinar con nuestro arroz Largo Fino 00000 y eleva tus comidas a nuevas alturas de exquisitez",
+      "Sumérgete en la excelencia culinaria con nuestro arroz Largo Fino 00000. Reconocido por su grano extra largo, calidad premium y elección excepcional, este arroz excepcionalmente refinado ofrece una experiencia culinaria incomparable. Cada grano, cuidadosamente seleccionado, garantiza una textura delicada y un sabor incomparable. Con hasta un 15% de granos partidos, este arroz conserva su integridad y calidad, asegurando resultados perfectos en cada plato. Descubre el verdadero placer de cocinar con nuestro arroz Largo Fino 00000 y eleva tus comidas a nuevas alturas de exquisitez.",
     src: "LargoFino50-1kg.png",
     alt: "Arroz largo fino 00000",
     codigo: "LargoFino00000"
@@ -14,7 +14,7 @@ export const products = [
     nombre: "Arroz Largo Fino",
     calidad: "0000",
     descripcion:
-      "Sumérgete en la esencia de la calidad suprema con nuestro arroz Largo Fino 0000. Caracterizado por su grano alargado y su textura delicada, este arroz premium ofrece una experiencia culinaria incomparable. Con hasta un 25% de granos partidos cuidadosamente seleccionados, cada bocado ofrece una fusión perfecta de sabor y consistencia. Disfruta de la excelencia en cada plato con nuestro arroz Largo Fino 0000, la elección ideal para los paladares más exigentes",
+      "Sumérgete en la esencia de la calidad suprema con nuestro arroz Largo Fino 0000. Caracterizado por su grano alargado y su textura delicada, este arroz premium ofrece una experiencia culinaria incomparable. Con hasta un 25% de granos partidos cuidadosamente seleccionados, cada bocado ofrece una fusión perfecta de sabor y consistencia. Disfruta de la excelencia en cada plato con nuestro arroz Largo Fino 0000, la elección ideal para los paladares más exigentes.",
     src: "LargoFino40-1kg.png",
     alt: "Arroz largo fino 0000",
     codigo: "LargoFino0000"
