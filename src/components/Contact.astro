@@ -1,5 +1,8 @@
----
+--- 
+import Form from "./Form.astro"
 import { Image } from "astro:assets";
+
+
 import Phone from "./img/Icons/Phone.png";
 import WhatsApp from "./img/Icons/WhatsApp.png";
 import Gmail from "./img/Icons/Gmail.png";
@@ -58,7 +61,7 @@ import Ubication from "./img/Icons/PlaceMarker.png";
       <div>
         <div>
           <div class="AddressTitleContainer">
-            <Image src={Ubication} alt="Ubicacion Oficinas Carogran" />
+            <Image src={Ubication} alt="Ubicacion Oficinas Carogran" class="addressImg"/>
             <h3>Oficina</h3>
           </div>
   
@@ -66,12 +69,12 @@ import Ubication from "./img/Icons/PlaceMarker.png";
             href="https://www.google.com/maps?q=Av.%20Córdoba%201345%20Piso%206,%20Capital%20federal,%20Buenos%20Aires"
             target="_blank"
           >
-            <p>Av. Córdoba 1345 Piso 6,</br> Capital federal, Buenos Aires</p>
+            <p>Av. Belgrano 748,</br> Capital federal, Buenos Aires</p>
           </a>
         </div>
         <div>
           <div class="AddressTitleContainer">
-            <Image src={Ubication} alt="Ubicacion Oficinas Carogran" />
+            <Image src={Ubication} alt="Ubicacion Oficinas Carogran" class="addressImg" />
             <h3>Planta</h3>
           </div>
           <a href="https://maps.app.goo.gl/sRGekPbocBQwmjWr7" target="_blank">
@@ -88,5 +91,8 @@ import Ubication from "./img/Icons/PlaceMarker.png";
         </div>
       </div>
     </div>
+  </div>
+  <div class="formContactContainer">
+    <Form />
   </div>
 </section>

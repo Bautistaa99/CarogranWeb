@@ -24,18 +24,62 @@ export const getStaticPaths = async () => {
 ---
 
 <Layout title={`Productos`}>
-
   <div class="productCardPage">
-      <div>
-        <img src=`/Products/${info.src}` alt={info.alt} />
-      </div>
+    <div>
+      <img src={`/Products/${info.src}`} alt={info.alt} loading="lazy" />
+    </div>
     <div class="productCardPageTextContainer">
-      <h1>{info.nombre}</h1>
+      <h1>{info.alt}</h1>
       <p>
         {info.descripcion}
       </p>
+      <div>
+        <button class={`product${info.codigo}`} id="openModalBtn">Ver información nutricional</button>
+      </div>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span id="closeModalBtn" class="close">X</span>
+          <img src={`${info.src2}`} alt="Información Nutricional" loading="lazy"/>
+        </div>
+      </div>
     </div>
   </div>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('modal');
+      const openModalBtn = document.getElementById('openModalBtn');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+  
+      // Asegúrate de que el modal esté oculto al iniciar
+      modal.style.visibility = 'hidden';
+      modal.style.opacity = "0";
+  
+      // Abre el modal al hacer clic en el botón
+      openModalBtn.addEventListener('click', () => {
+        modal.style.visibility = 'visible';
+        modal.style.opacity = "1";
+      });
+  
+      // Cierra el modal al hacer clic en la cruz
+      closeModalBtn.addEventListener('click', () => {
+        modal.style.opacity = "0";
+        setTimeout(() => {
+          modal.style.visibility = 'hidden';
+        }, 500); // El tiempo debe coincidir con la duración de la transición
+      });
+  
+      // Cierra el modal al hacer clic fuera del contenido
+      window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          modal.style.opacity = "0";
+          setTimeout(() => {
+            modal.style.visibility = 'hidden';
+          }, 500); // El tiempo debe coincidir con la duración de la transición
+        }
+      });
+    });
+  </script>
+  
 </Layout>
 

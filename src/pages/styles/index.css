@@ -13,6 +13,7 @@ body {
     #ffe8e8 77%,
     rgba(253, 253, 253, 0) 100%
   );
+
   font-family: "Nunito", sans-serif;
 }
 a {
@@ -30,6 +31,7 @@ h1 {
 h2 {
   font-size: 2.5rem;
   font-weight: 800;
+  
 }
 h3 {
   font-size: 1.5rem;
@@ -64,11 +66,17 @@ small{
 .navList {
   display: flex;
   gap: 30px;
-  font-weight: bold;
   margin: 0;
   padding: 0;
 }
 
+.navList>li>a:hover{
+  transition: 0.6s;
+  color: red;
+}
+.navList>li>a{
+  font-weight: 800;
+}
 
 
 /*** Main */
@@ -92,34 +100,21 @@ h2 {
 }
 
 span {
-  color: red;
+  color: #fd0003;
 }
 
-.fondo {
-  position: absolute; /* Establece la posición absoluta para el fondo */
-  height: 100%; /* Ajusta la altura para cubrir todo el contenedor */
-  z-index: 0; /* Coloca el fondo detrás del contenido */
-  background-size: auto;
-  border-radius: 0 0 20px 20px;
-  opacity: 0.8;
-}
+/** cards **/
 
-/*** Cards */
+#products {
+  margin-top: 100px;
+}
 
 .cardContainer {
   display: grid;
-  grid-template-columns: repeat(
-    3,
-    1fr
-  ); /* Crea 3 columnas con el mismo ancho */
+  grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas con el mismo ancho */
   gap: 80px 80px; /* Espacio entre las celdas */
   margin: 50px 0;
-}
-
-.cardContainer {
-  display: grid;
   padding: 0;
-  
 }
 
 .productsTitle {
@@ -128,7 +123,7 @@ span {
 
 .productCard {
   display: flex;
-  padding: 12px 28px;
+  padding: 12px 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -136,7 +131,21 @@ span {
   min-height: 500px;
 }
 
-.productCard > a > div > img {
+.productCard > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+
+.productCard > a:hover > div > img {
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+.productCardImgContainer > img {
+  height: 300px;
   width: 10rem;
   border-radius: 1rem;
   object-fit: contain;
@@ -159,17 +168,17 @@ span {
   padding: 16px 24px;
   gap: 8px;
   border-radius: 12px;
-  background: #fd0003;
-  border: none;
+  border: 3px solid #fd0003;
   font-weight: bolder;
   cursor: pointer;
+  background-color: transparent;
+  color: #fd0003;
 }
 
-.productCard > a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.productCard > a:hover > button {
+  background-color: #fd0003;
+  color: white;
+  transition: 1s;
 }
 
 /** Contacto */
@@ -209,6 +218,10 @@ span {
   align-items: center;
   gap: 10px;
 }
+.AddressTitleContainer>img, .ContactTitleContainer>img{
+  width: 40px;
+  height: auto;
+}
 .MobilesContainer>div>h4, .MobilesContainer>div>p{
   margin: 5px;
 }
@@ -237,7 +250,101 @@ span {
   width: auto;
 }
 
+
+/**Formulario **/
+.FormSectionContainer>h3{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+label{
+  font-size: 16px;
+  font-weight: 800;
+}
+.form-group>input{
+  font-size: 14px;
+  width: 250px;
+  height: 20px;
+}
+
+
+.formContactContainer{
+  display: flex;
+  justify-content: center;
+}
+
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.formInputsContainer{
+  display: flex;
+  gap: 100px;
+}
+.formInputsNameEmail{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-group-textarea{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+}
+.form-group-textarea>textarea{
+  width: max-content;
+  width: 100%;
+  height: 130px;
+  font-size: 14px;
+  resize: none;
+}
+
+.btnEnviarEmail{
+  margin-top: 20px;
+  padding: 16px 48px;
+  text-align: center;
+  border-radius: 12px;
+  background: #fd0003;
+  border: none;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  display: flex;
+  justify-content: center; /* Añadido para centrar horizontalmente */
+  align-items: center; /* Añadido para centrar verticalmente */
+}
+
+.btnEnviarEmail:hover{
+  opacity: 0.8;
+  transition: 1s;
+}
+
+
+
 /* About Us */
+
+#aboutUs{
+  margin-top: 50px;
+}
 
 .AboutUsContainer>h2{
   text-align: center;
@@ -267,6 +374,9 @@ span {
 .AboutUsImageContainer>img{
   width: 100%;
   height: min-content;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+
 }
 .AddressesContainer>div>div>p{
   margin-top: 0;
@@ -298,13 +408,12 @@ span {
   align-items: center;
   text-align: center;
   max-width: 500px;
-
 }
 .productCardPage:nth-child(2)  > p {
   max-width: 500px;
   margin: 0 auto; /* Centra el párrafo dentro del div */
   overflow-wrap: break-word; /* Permite que las palabras largas se rompan */
-  background-color: red;
+  background-color: #fd0003;
 }
 
 .productCardPage>div>img{
@@ -319,7 +428,207 @@ span {
   text-align: center;
 }
 
+.productCardPageTextContainer>div{
+  display: flex;
+  justify-content: center;
+}
+.productCardPageTextContainer>div>button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 12px;
+  gap: 8px;
+  border-radius: 12px;
+  font-weight: bolder;
+  cursor: pointer;
+  width: 50%;
+  height: 50%;
+  margin-top: 20px;
+}
 
+
+
+.productLargoFino0000{
+  border: 3px solid #1e7ba1;
+  color: #1e7ba1;
+}
+.productLargoFino0000:hover {
+  background-color: #1e7ba1;
+  color: white;
+  transition: 1s;
+}
+
+.productLargoFino00000{
+  border: 3px solid #fd0003;
+  color: #fd0003;
+}
+.productLargoFino00000:hover {
+  background-color: #fd0003;
+  color: white;
+  transition: 1s;
+}
+
+.productLargoFino00000{
+  border: 3px solid #fd0003;
+  color: #fd0003;
+}
+.productLargoFino00000:hover {
+  background-color: #fd0003;
+  color: white;
+  transition: 1s;
+}
+
+.productDobleCarolina{
+  border: 3px solid #86713c;
+  color: #86713c;
+}
+.productDobleCarolina:hover {
+  background-color: #86713c;
+  color: white;
+  transition: 1s;
+}
+
+.productParboil{
+  border: 3px solid #d2ac38;
+  color: #d2ac38;
+}
+.productParboil:hover {
+  background-color: #d2ac38;
+  color: white;
+  transition: 1s;
+}
+
+.productIntegral{
+  border: 3px solid #135236;
+  color: #135236;
+}
+.productIntegral:hover {
+  background-color: #135236;
+  color: white;
+  transition: 1s;
+}
+
+  /* Estilo para el modal */
+  .modal {
+    visibility: hidden; /* Oculto por defecto */
+    opacity: 0; /* Completamente transparente */
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh; /* Ajustado para cubrir toda la pantalla */
+    overflow: hidden; /* Evita el scroll */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    backdrop-filter: blur(5px); /* Fondo borroso */
+    display: flex;
+    justify-content: center;
+    align-items: start; /* Centra el contenido */
+    transition: visibility 0s, opacity 0.5s ease-in-out; /* Transición suave */
+    padding-top: 20px;
+  }
+
+  /* Botón de cierre del modal */
+  .close {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  border-radius: 50px;
+  background: rgb(255, 255, 255);
+  border: none;
+  font-size: 24px;
+  font-weight: 900;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  transition: color 0.3s ease;
+  }
+
+  /* Contenido del modal */
+  .modal-content {
+    position: relative; /* Importante para que la posición del botón de cierre sea relativa al contenido */
+    padding: 20px;
+    border-radius: 10px;
+    width: auto;
+    max-width: 90%; /* Ajusta el tamaño máximo del modal */
+    max-height: 90%; /* Ajusta la altura máxima del modal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; /* Considera el padding en el tamaño */
+  }
+
+  .modal-content img {
+    width: auto;
+    max-width: 500px;
+    max-height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+   /* Estilo para el modal */
+   .modal {
+    visibility: hidden; /* Oculto por defecto */
+    opacity: 0; /* Completamente transparente */
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh; /* Ajustado para cubrir toda la pantalla */
+    overflow: hidden; /* Evita el scroll */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    backdrop-filter: blur(5px); /* Fondo borroso */
+    display: flex;
+    justify-content: center;
+    align-items: start; /* Centra el contenido */
+    transition: visibility 0s, opacity 0.5s ease-in-out; /* Transición suave */
+    padding-top: 20px;
+  }
+
+  /* Botón de cierre del modal */
+  .close {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  border-radius: 50px;
+  background: rgb(255, 255, 255);
+  border: none;
+  font-size: 24px;
+  font-weight: 900;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  transition: color 0.3s ease;
+  }
+
+  /* Contenido del modal */
+  .modal-content {
+    position: relative; /* Importante para que la posición del botón de cierre sea relativa al contenido */
+    padding: 20px;
+    border-radius: 10px;
+    width: auto;
+    max-width: 90%; /* Ajusta el tamaño máximo del modal */
+    max-height: 90%; /* Ajusta la altura máxima del modal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; /* Considera el padding en el tamaño */
+  }
+
+  .modal-content img {
+    width: auto;
+    max-width: 500px;
+    max-height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
 
 /* Footer  */
 
@@ -488,6 +797,14 @@ footer{
   #products{
     margin-top: 70px;
   }
+
+  .modal-content img {
+    width: auto;
+    max-width: auto;
+    max-height: 450px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 650px) {
@@ -575,7 +892,7 @@ footer{
   }
 
   .productCardImgContainer>img{
-    width: 150px;
+    height: 350px;
   }
 
   /* CONTACT */
@@ -606,6 +923,28 @@ footer{
   .AboutUsTextContainer{
     width: 100%;
   }
+
+    /* Formulario */
+
+    .formInputsContainer{
+      flex-direction: column; 
+      gap: 25px;
+    }
+    .form-group-textarea{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: max-content;
+    }
+    .form-group-textarea>input{
+      width: 40px;
+      display: flex;
+      justify-content: start;
+      align-items: start;
+    }
+    .form-group-textarea>textarea{
+      width: 250px;
+    }
 
 
     /* Product Card Page */
@@ -716,7 +1055,7 @@ footer{
   }
 
   .productCardImgContainer>img{
-    width: 150px;
+    height: 350px;
   }
 
   /* CONTACT */
@@ -726,10 +1065,11 @@ footer{
     align-items: center;
   }
 
-  .AddressesContainer, .co{
+  .AddressesContainer, .contactInfo{
     margin-top: 30px;
     width: 100%;
   }
+
 
   .AddressesContainer>div{
     width: 100%;
@@ -747,7 +1087,6 @@ footer{
   .AboutUsTextContainer{
     width: 100%;
   }
-
 
     /* Product Card Page */
   .productCardPage{

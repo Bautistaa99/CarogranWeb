@@ -11,13 +11,13 @@ interface Props {
 
 
 
-const { src, alt, href, title, calidad } = Astro.props;
+const { src, alt, href, title, calidad} = Astro.props;
 ---
 
 <div class="productCard">
   <a href={href} >
     <div class="productCardImgContainer">
-      <img src={src} alt={alt}/>
+      <img src={src} alt={alt} loading="lazy"/>
     </div>
     <div>
       <h3 class="productCardTitle">

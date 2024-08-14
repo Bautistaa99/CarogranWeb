@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import Logo from './img/Icons/carogranLogo.png';
+import Logo from './img/Icons/carogranLogo2.png';
 import Menu from './img/Icons/menuHamburgesa.png';
 ---
 
@@ -13,14 +13,14 @@ import Menu from './img/Icons/menuHamburgesa.png';
     </div>
     <nav class="navContainer">
       <button class="hamburgerMenuContainer" id="hamburgerIcon">
-        <Image src={Menu} alt="menu hamburgesa" class="hamburgerMenu"/>
+        <Image src={Menu} alt="menu hamburguesa" class="hamburgerMenu"/>
       </button>
       <div class="navListContainer">
         <ul class="navList" id="navList">
           <li><a href="/#index">Inicio</a></li>
+          <li><a href="/#aboutUs">Sobre nosotros</a></li>
           <li><a href="/#products">Productos</a></li>
           <li><a href="/#contact">Contacto</a></li>
-          <li><a href="/#aboutUs">Sobre nosotros</a></li>
         </ul>
       </div>
     </nav>
@@ -28,13 +28,36 @@ import Menu from './img/Icons/menuHamburgesa.png';
 </header>
 
 <script>
-
+  // Esperar a que el DOM esté completamente cargado
+  document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.getElementById('hamburgerIcon');
     const navList = document.getElementById('navList');
-    if (menuBtn) {
-      menuBtn.addEventListener('click', () => {
+
+    if (menuBtn && navList) {
+      // Alternar la visibilidad del menú al hacer clic en el botón
+      menuBtn.addEventListener('click', (event) => {
+        event.stopPropagation(); // Evitar la propagación del evento
         navList.classList.toggle('active');
       });
-    }
 
+      // Cerrar el menú al hacer clic en un enlace
+      const navLinks = navList.querySelectorAll('a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navList.classList.remove('active');
+        });
+      });
+
+      // Cerrar el menú al hacer clic fuera del menú
+      window.addEventListener('click', (event) => {
+        const target = event.target; // Obtener el elemento objetivo del evento
+        if (!(target instanceof Node)) return; // Asegurarse de que el target es un Node
+        if (!navList.contains(target) && !menuBtn.contains(target)) {
+          navList.classList.remove('active');
+        }
+      });
+    }
+  });
 </script>
+
+

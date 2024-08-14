@@ -18,13 +18,20 @@ import "../pages/styles/index.css"
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-	  <link rel="shortcut icon" href="Products/carogranLogo.png"> 
-
+	  <link rel="shortcut icon" href="Products/carogranLogo.png">
+    <link rel="preconnect">
+    <link rel="prerender">
 
     <meta name="theme-color" content="#000000">
     <meta name="keywords" content="arroz, Carogran, Largo Fino" />
     <meta name="theme-color" content="#ffffff" />
 
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+    emailjs.init('sR8BuHVKrNYNZ99F4')
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,7 +49,6 @@ import "../pages/styles/index.css"
 
     <slot />
   <Footer />
-
   </body>
 </html>
 <style is:global>
