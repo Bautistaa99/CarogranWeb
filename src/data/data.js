@@ -9,7 +9,7 @@ export const products = [
     src: "000001kg.png",
     alt: "Arroz largo fino 00000",
     codigo: "LargoFino00000",
-    src2:"public/Otros/IF00000.jpg"
+    src2:"IF00000.png"
   },
   {
     id: "2",
@@ -21,7 +21,7 @@ export const products = [
     src: "00001kg.png",
     alt: "Arroz largo fino 0000",
     codigo: "LargoFino0000",
-    src2:"public/Otros/IF0000.jpg"
+    src2:"IF0000.png"
 
   },
   {
@@ -33,7 +33,7 @@ export const products = [
     src: "PARBOIL1KG.png",
     alt: "Arroz parboil “no se pasa”",
     codigo: "Parboil",
-    src2:"public/Otros/IFPARBOIL.jpg"
+    src2:"IFPARBOIL.png"
   },
   {
     id: "4",
@@ -44,7 +44,7 @@ export const products = [
     src: "Doble1kg.png",
     alt: "Arroz doble carolina",
     codigo: "DobleCarolina",
-    src2:"public/Otros/IFDOBLE.jpg"
+    src2:"IFDOBLE.png"
   },
   {
     id: "5",
@@ -55,6 +55,6 @@ export const products = [
     src: "Integral1kg.png",
     alt: "Arroz integral",
     codigo: "Integral",
-    src2:"public/Otros/IFINTEGRAL.jpg"
+    src2:"IFINTEGRAL.png"
   },
 ];
