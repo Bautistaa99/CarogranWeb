@@ -70,10 +70,7 @@ small{
   padding: 0;
 }
 
-.navList>li>a:hover{
-  transition: 0.6s;
-  color: red;
-}
+
 .navList>li>a{
   font-weight: 800;
 }
@@ -139,10 +136,7 @@ span {
   transition: 1s;
 }
 
-.productCard > a:hover > div > img {
-  transform: scale(1.1);
-  transition: 1s;
-}
+
 
 .productCardImgContainer > img {
   height: 300px;
@@ -175,11 +169,7 @@ span {
   color: #fd0003;
 }
 
-.productCard > a:hover > button {
-  background-color: #fd0003;
-  color: white;
-  transition: 1s;
-}
+
 
 /** Contacto */
 .Contact{
@@ -333,10 +323,7 @@ label{
   align-items: center; /* Añadido para centrar verticalmente */
 }
 
-.btnEnviarEmail:hover{
-  opacity: 0.8;
-  transition: 1s;
-}
+
 
 
 
@@ -452,125 +439,40 @@ label{
   border: 3px solid #1e7ba1;
   color: #1e7ba1;
 }
-.productLargoFino0000:hover {
-  background-color: #1e7ba1;
-  color: white;
-  transition: 1s;
-}
+
 
 .productLargoFino00000{
   border: 3px solid #fd0003;
   color: #fd0003;
 }
-.productLargoFino00000:hover {
-  background-color: #fd0003;
-  color: white;
-  transition: 1s;
-}
+
 
 .productLargoFino00000{
   border: 3px solid #fd0003;
   color: #fd0003;
 }
-.productLargoFino00000:hover {
-  background-color: #fd0003;
-  color: white;
-  transition: 1s;
-}
+
 
 .productDobleCarolina{
   border: 3px solid #86713c;
   color: #86713c;
 }
-.productDobleCarolina:hover {
-  background-color: #86713c;
-  color: white;
-  transition: 1s;
-}
+
 
 .productParboil{
   border: 3px solid #d2ac38;
   color: #d2ac38;
 }
-.productParboil:hover {
-  background-color: #d2ac38;
-  color: white;
-  transition: 1s;
-}
+
 
 .productIntegral{
   border: 3px solid #135236;
   color: #135236;
 }
-.productIntegral:hover {
-  background-color: #135236;
-  color: white;
-  transition: 1s;
-}
+
 
   /* Estilo para el modal */
   .modal {
-    visibility: hidden; /* Oculto por defecto */
-    opacity: 0; /* Completamente transparente */
-    position: fixed;
-    z-index: 100;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh; /* Ajustado para cubrir toda la pantalla */
-    overflow: hidden; /* Evita el scroll */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
-    backdrop-filter: blur(5px); /* Fondo borroso */
-    display: flex;
-    justify-content: center;
-    align-items: start; /* Centra el contenido */
-    transition: visibility 0s, opacity 0.5s ease-in-out; /* Transición suave */
-    padding-top: 20px;
-  }
-
-  /* Botón de cierre del modal */
-  .close {
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 5px;
-  border-radius: 50px;
-  background: rgb(255, 255, 255);
-  border: none;
-  font-size: 24px;
-  font-weight: 900;
-  cursor: pointer;
-  color: rgb(0, 0, 0);
-  transition: color 0.3s ease;
-  }
-
-  /* Contenido del modal */
-  .modal-content {
-    position: relative; /* Importante para que la posición del botón de cierre sea relativa al contenido */
-    padding: 20px;
-    border-radius: 10px;
-    width: auto;
-    max-width: 90%; /* Ajusta el tamaño máximo del modal */
-    max-height: 90%; /* Ajusta la altura máxima del modal */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box; /* Considera el padding en el tamaño */
-  }
-
-  .modal-content img {
-    width: auto;
-    max-width: 500px;
-    max-height: auto;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
-
-   /* Estilo para el modal */
-   .modal {
     visibility: hidden; /* Oculto por defecto */
     opacity: 0; /* Completamente transparente */
     position: fixed;
@@ -646,6 +548,63 @@ footer{
 
 
 
+@media (min-width:750px) {
+  .navList>li>a:hover{
+    transition: 0.6s;
+    color: red;
+  }
+  .productCard > a:hover > div > img {
+    transform: scale(1.1);
+    transition: 1s;
+  }
+  
+  .productCard > a:hover > button {
+    background-color: #fd0003;
+    color: white;
+    transition: 1s;
+  }
+  /* Form */
+  .btnEnviarEmail:hover{
+    opacity: 0.8;
+    transition: 1s;
+  }
+
+  /* Page Product */
+  .btnEnviarEmail:hover{
+    opacity: 0.8;
+    transition: 1s;
+  }
+  .productLargoFino0000:hover {
+    background-color: #1e7ba1;
+    color: white;
+    transition: 1s;
+  }
+  .productLargoFino00000:hover {
+    background-color: #fd0003;
+    color: white;
+    transition: 1s;
+  }
+  .productLargoFino00000:hover {
+    background-color: #fd0003;
+    color: white;
+    transition: 1s;
+  }
+  .productDobleCarolina:hover {
+    background-color: #86713c;
+    color: white;
+    transition: 1s;
+  }
+  .productParboil:hover {
+    background-color: #d2ac38;
+    color: white;
+    transition: 1s;
+  }
+  .productIntegral:hover {
+    background-color: #135236;
+    color: white;
+    transition: 1s;
+  }
+}
 
 @media (max-width: 1280px) {
   body {

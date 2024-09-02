@@ -64,18 +64,14 @@ export const getStaticPaths = async () => {
       // Cierra el modal al hacer clic en la cruz
       closeModalBtn.addEventListener('click', () => {
         modal.style.opacity = "0";
-        setTimeout(() => {
           modal.style.visibility = 'hidden';
-        }, 500); // El tiempo debe coincidir con la duración de la transición
       });
   
       // Cierra el modal al hacer clic fuera del contenido
       window.addEventListener('click', (event) => {
         if (event.target === modal) {
           modal.style.opacity = "0";
-          setTimeout(() => {
             modal.style.visibility = 'hidden';
-          }, 500); // El tiempo debe coincidir con la duración de la transición
         }
       });
     });

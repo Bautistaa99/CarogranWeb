@@ -16,34 +16,34 @@ import "../pages/styles/index.css"
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-	  <link rel="shortcut icon" href="Products/carogranLogo.png">
-    <link rel="preconnect">
-    <link rel="prerender">
-
-    <meta name="theme-color" content="#000000">
-    <meta name="keywords" content="arroz, Carogran, Largo Fino" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content="{Astro.generator}" />
     <meta name="theme-color" content="#ffffff" />
+    <meta name="keywords" content="arroz, Carogran, Largo Fino" />
 
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-    <script type="text/javascript">
-    emailjs.init('sR8BuHVKrNYNZ99F4')
+    <link rel="shortcut icon" href="Products/carogranLogo.png" type="image/png">
+    
+    <!-- Preconexión para mejorar tiempos de carga -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload de fuentes para optimizar la carga -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    </noscript>
+    
+    <!-- Script de EmailJS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script defer>
+        window.onload = function() {
+            emailjs.init('sR8BuHVKrNYNZ99F4');
+        }
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-      rel="stylesheet"
-    />
-
-
     <title>Inicio</title>
-    
-  </head>
+</head>
+
   <body>
   <Header />
 
@@ -51,32 +51,3 @@ import "../pages/styles/index.css"
   <Footer />
   </body>
 </html>
-<style is:global>
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background: #d2d3d6;
-    background-size: 224px;
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-</style>
