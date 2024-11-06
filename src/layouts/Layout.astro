@@ -5,8 +5,6 @@ interface Props {
 
 const { title } = Astro.props;
 
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 
 import "../pages/styles/index.css"
 ---
@@ -45,9 +43,8 @@ import "../pages/styles/index.css"
 </head>
 
   <body>
-  <Header />
-
-    <slot />
-  <Footer />
+  <slot />
   </body>
 </html>
+
+
