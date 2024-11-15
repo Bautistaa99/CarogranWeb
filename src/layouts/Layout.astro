@@ -4,9 +4,9 @@ interface Props {
 }
 
 const { title } = Astro.props;
-
-
-import "../pages/styles/index.css"
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import "../pages/styles/index.css";
 ---
 
 <!doctype html>
@@ -19,32 +19,59 @@ import "../pages/styles/index.css"
     <meta name="theme-color" content="#ffffff" />
     <meta name="keywords" content="arroz, Carogran, Largo Fino" />
 
-    <link rel="shortcut icon" href="Products/carogranLogo.png" type="image/png">
-    
+    <link
+      rel="shortcut icon"
+      href="Products/carogranLogo.png"
+      type="image/png"
+    />
+
     <!-- Preconexión para mejorar tiempos de carga -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <!-- Preload de fuentes para optimizar la carga -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
     <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+      <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet"
+      />
     </noscript>
-    
+
     <!-- Script de EmailJS -->
-    <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script defer>
-        window.onload = function() {
-            emailjs.init('sR8BuHVKrNYNZ99F4');
-        }
+      window.onload = function () {
+        emailjs.init("sR8BuHVKrNYNZ99F4");
+      };
     </script>
 
     <title>Inicio</title>
-</head>
-
+  </head>
   <body>
-  <slot />
+    <div class="space">
+    </div>
+    <Header />
+    <slot />
+    <Footer />
   </body>
 </html>
 
-
+<style>
+  body{
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;    
+  }
+  .space{
+  height: 94px;
+  }
+</style>

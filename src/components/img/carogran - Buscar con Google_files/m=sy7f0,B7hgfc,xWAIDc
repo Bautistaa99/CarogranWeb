@@ -1,0 +1,20 @@
+this._s=this._s||{};(function(_){var window=this;
+try{
+_.utw=_.w("B7hgfc",[_.btw,_.fr]);
+}catch(e){_._DumpException(e)}
+try{
+_.u("B7hgfc");
+var KLD=class extends _.Sf{static Ra(){return{model:{dialog:_.MmD},service:{Gc:_.eu}}}constructor(a){super(a.Ma);this.oa=a.model.dialog;this.Vb=a.service.Gc}open(){this.Vb.oa().oa(this.getRoot().el()).log();_.K7(this.oa,"~:listingId/setup/complete?flowType=3")}};_.H(KLD.prototype,"FNFY6c",function(){return this.open});_.O(_.utw,KLD);
+_.v();
+}catch(e){_._DumpException(e)}
+try{
+_.u("xWAIDc");
+var ThH=_.G("yG7qfd");var UhH=class extends _.Sf{static Ra(){return{service:{Gc:_.eu},soy:{Rae:_.Zvh}}}constructor(a){super(a.Ma);this.Vb=a.service.Gc;this.element=a.soy.Rae;this.Aa=_.js(this).zc(()=>void this.element.render()).build()}Ba(a){this.Vb.logEvent({Ze:_.hg(a.ob.el(),3)});a=_.al(a.ob.getData("uid"));this.element.Ba!==a&&(this.oa(a),this.trigger(ThH,a))}oa(a){const b=this;_.z(function*(){b.element.Ba=a;yield b.Aa()})}};_.H(UhH.prototype,"HM95Gf",function(){return this.Ba});_.O(_.U3v,UhH);
+
+
+
+
+_.v();
+}catch(e){_._DumpException(e)}
+})(this._s);
+// Google Inc.

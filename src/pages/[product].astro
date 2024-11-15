@@ -26,8 +26,7 @@ export const getStaticPaths = async () => {
 ---
 
 <Layout title={`Productos`}>
-  <div class="footerDown">
-  <Header />
+  </div>
   <div class="productCardPage">
     <div>
       <img src={`/Products/${info.src}`} alt={info.alt} loading="lazy" />
@@ -80,14 +79,5 @@ export const getStaticPaths = async () => {
       });
     });
   </script>
-  <Footer />
 </div>
 </Layout>
-
-<style>
-  .footerDown{
-    display: grid;
-    min-height: 100dvh;
-    grid-template-rows: auto 1fr auto;
-  }
-</style>
